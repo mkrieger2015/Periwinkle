@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="PeriwinkleContent\LoadAllContent.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Alarmable.cpp">
+      <Filter>Periwinkle Engine\Alarms</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\AlarmMan.cpp">
+      <Filter>Periwinkle Engine\Alarms</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\AlarmMarker.cpp">
+      <Filter>Periwinkle Engine\Alarms</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Collidable.cpp">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\CollidableGroupBase.cpp">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\CollisionMan.cpp">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Drawable.cpp">
+      <Filter>Periwinkle Engine\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\DrawableMan.cpp">
+      <Filter>Periwinkle Engine\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Game.cpp">
+      <Filter>Periwinkle Engine\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\GameObject.cpp">
+      <Filter>Periwinkle Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Inputable.cpp">
+      <Filter>Periwinkle Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\InputableMan.cpp">
+      <Filter>Periwinkle Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\KeyObject.cpp">
+      <Filter>Periwinkle Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\main.cpp">
+      <Filter>Periwinkle Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\ResourceMan.cpp">
+      <Filter>Periwinkle Engine\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Scene.cpp">
+      <Filter>Periwinkle Engine\Scene %28Base%29</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\SceneMan.cpp">
+      <Filter>Periwinkle Engine\Scene %28Base%29</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Terminable.cpp">
+      <Filter>Periwinkle Engine\Termination</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\TerminationMan.cpp">
+      <Filter>Periwinkle Engine\Termination</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\TimeMan.cpp">
+      <Filter>Periwinkle Engine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Updateable.cpp">
+      <Filter>Periwinkle Engine\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\UpdateableMan.cpp">
+      <Filter>Periwinkle Engine\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\UserGamePrefs.cpp">
+      <Filter>User Files\User Game Prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\Dumpster.cpp">
+      <Filter>Periwinkle Engine\Dumpster</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\ShooterScene.cpp">
+      <Filter>User Files\Scenes %28Game%29</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\Spaceship.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\TerminableReciever.cpp">
+      <Filter>Periwinkle Engine\Termination</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\EnemyCube.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\Bullet.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\TestScene.cpp">
+      <Filter>User Files\Scenes %28Game%29</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\TestGO.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\TestGOSecond.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Libs">
+      <UniqueIdentifier>{654b17f4-5c32-4af8-9c06-44081aee35e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Time">
+      <UniqueIdentifier>{00a7d9a7-621b-4cd1-ab70-b15a303a0e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Time\include">
+      <UniqueIdentifier>{22fb9e59-7fdb-44a2-b3f4-aa36c607468e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Math">
+      <UniqueIdentifier>{f7cd51a8-6ca7-472f-a6c3-31ce8fde6c0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Math\include">
+      <UniqueIdentifier>{20f26c44-6049-453c-9a4b-38e04c3a12c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_File">
+      <UniqueIdentifier>{e3abff6f-2abf-4ce0-b8ef-784c3ec6379b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_File\include">
+      <UniqueIdentifier>{9aca96a8-c51f-4709-a910-aa551e8732cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Azul">
+      <UniqueIdentifier>{452fe1b8-c527-4569-8967-51e4f2139f06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Azul\include">
+      <UniqueIdentifier>{0ad67470-fbca-4090-bba8-5213abfc2846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files">
+      <UniqueIdentifier>{0a1a919c-9d3f-433e-ab9e-ac864306bb79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Scenes %28Game%29">
+      <UniqueIdentifier>{93357f61-74e4-4dac-b879-de808e64a408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{d2143ae9-9a3e-49ef-bfdc-38aeb50cf916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine">
+      <UniqueIdentifier>{53ce78e6-f690-4cef-b216-4a2ce5c4d8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Alarms">
+      <UniqueIdentifier>{87aba016-2ee5-4c06-b324-658f82c75d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Update">
+      <UniqueIdentifier>{5851f4eb-ec6c-490f-8952-92dd261222e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Time">
+      <UniqueIdentifier>{65b74a8e-b5d2-4df7-b205-3ee616097de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Game">
+      <UniqueIdentifier>{86c7a0f8-d7e4-4ca3-8d9c-6aa4fa4a601d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Draw">
+      <UniqueIdentifier>{e5356b7a-24f6-47a8-b483-72c585666247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\GameObject">
+      <UniqueIdentifier>{c0df90cc-e395-4ccb-b3c5-1dd7f7f2c381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Input">
+      <UniqueIdentifier>{ac0f8aad-a8b8-46de-a5d9-4575333ee1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Resources">
+      <UniqueIdentifier>{7e50e72e-ac9a-4919-82d2-57922871b049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Scene %28Base%29">
+      <UniqueIdentifier>{55d63c3c-9bf9-4ea0-a342-f1802d48c122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Collisions">
+      <UniqueIdentifier>{49ffa1f3-06bd-44cb-ac54-5b47a0c06863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Termination">
+      <UniqueIdentifier>{7e576116-e3a9-4b44-81d9-e38be946df1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\User Game Prefs">
+      <UniqueIdentifier>{1961425c-a63f-4abb-9f9b-86051ed25b10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Dumpster">
+      <UniqueIdentifier>{6ce559d8-0e0d-4df8-b41d-e0a20b6a036e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Doxygen">
+      <UniqueIdentifier>{7014ef30-4b1c-48f6-a476-5ec40e6eb7d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Time\include\Time.h">
+      <Filter>_Libs\_Time\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Time\include\Timer.h">
+      <Filter>_Libs\_Time\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\include\MathApp.h">
+      <Filter>_Libs\_Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\include\MathEngine.h">
+      <Filter>_Libs\_Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\File\include\File.h">
+      <Filter>_Libs\_File\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Azul\include\Azul.h">
+      <Filter>_Libs\_Azul\include</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Alarmable.h">
+      <Filter>Periwinkle Engine\Alarms</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\AlarmMan.h">
+      <Filter>Periwinkle Engine\Alarms</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\AlarmMarker.h">
+      <Filter>Periwinkle Engine\Alarms</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Collidable.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollidableGroup.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollidableGroupBase.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionMan.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Drawable.h">
+      <Filter>Periwinkle Engine\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\DrawableMan.h">
+      <Filter>Periwinkle Engine\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Game.h">
+      <Filter>Periwinkle Engine\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\GameObject.h">
+      <Filter>Periwinkle Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Inputable.h">
+      <Filter>Periwinkle Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\InputableMan.h">
+      <Filter>Periwinkle Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\KeyObject.h">
+      <Filter>Periwinkle Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\ResourceMan.h">
+      <Filter>Periwinkle Engine\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Scene.h">
+      <Filter>Periwinkle Engine\Scene %28Base%29</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\SceneMan.h">
+      <Filter>Periwinkle Engine\Scene %28Base%29</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Terminable.h">
+      <Filter>Periwinkle Engine\Termination</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\TerminationMan.h">
+      <Filter>Periwinkle Engine\Termination</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\TimeMan.h">
+      <Filter>Periwinkle Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Updateable.h">
+      <Filter>Periwinkle Engine\Update</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\UpdateableMan.h">
+      <Filter>Periwinkle Engine\Update</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\Dumpster.h">
+      <Filter>Periwinkle Engine\Dumpster</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\ShooterScene.h">
+      <Filter>User Files\Scenes %28Game%29</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\Spaceship.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\TerminableReciever.h">
+      <Filter>Periwinkle Engine\Termination</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionPairProcessor.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionProcessorBase.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionSingleProcessor.h">
+      <Filter>Periwinkle Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\EnemyCube.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\Bullet.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\DoxygenGroups.h">
+      <Filter>Periwinkle Engine\Doxygen</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\TestScene.h">
+      <Filter>User Files\Scenes %28Game%29</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\TestGO.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\TestGOSecond.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Azul\lib\AzulDebug.lib">
+      <Filter>_Libs\_Azul</Filter>
+    </Library>
+    <Library Include="..\Time\lib\TimeDebug.lib">
+      <Filter>_Libs\_Time</Filter>
+    </Library>
+    <Library Include="..\Time\lib\TimeRelease.lib">
+      <Filter>_Libs\_Time</Filter>
+    </Library>
+    <Library Include="..\Math\lib\MathDebug.lib">
+      <Filter>_Libs\_Math</Filter>
+    </Library>
+    <Library Include="..\Math\lib\MathRelease.lib">
+      <Filter>_Libs\_Math</Filter>
+    </Library>
+    <Library Include="..\File\lib\FileDebug.lib">
+      <Filter>_Libs\_File</Filter>
+    </Library>
+    <Library Include="..\File\lib\FileRelease.lib">
+      <Filter>_Libs\_File</Filter>
+    </Library>
+    <Library Include="..\Azul\lib\AzulRelease.lib">
+      <Filter>_Libs\_Azul</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
