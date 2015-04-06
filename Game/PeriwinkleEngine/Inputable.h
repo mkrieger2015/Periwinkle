@@ -13,7 +13,7 @@
 ///
 class Inputable
 {
-
+	friend class KeyObject;
 public:
 
 	///
@@ -74,6 +74,7 @@ public:
 	///
 	virtual void DeregisterKeyRelease(AZUL_KEY key);
 
+protected:
 	///
 	///\fn	virtual void Inputable::OnKeyPress(AZUL_KEY key);
 	///

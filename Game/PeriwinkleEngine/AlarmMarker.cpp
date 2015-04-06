@@ -19,26 +19,14 @@ float AlarmMarker::GetAlarmTime()
 	return alarmTime;
 }
 
+int AlarmMarker::GetAlarmID()
+{
+	return alarmID;
+}
+
 void AlarmMarker::TriggerAlarm()
 {
 	callback->Dispatch(alarmID);
-}
-
-void AlarmMarker::AddTime(float time)
-{
-	alarmTime += time;
-}
-
-void AlarmMarker::SubtractTime(float time)
-{
-	if(alarmTime - time > TimeMan::GetTotalTime())
-	{
-		alarmTime -= time;
-	}
-	else
-	{
-		alarmTime= TimeMan::GetTotalTime();
-	}
 }
 
 AlarmMarker::~AlarmMarker()

@@ -21,6 +21,7 @@
 ///
 class GameObject : public Inputable, public Drawable, public Updateable, public Alarmable, public Collidable, public Terminable
 {
+
 protected: 
 	///\brief	The object's transform matrix.
 	Matrix world;
@@ -33,18 +34,6 @@ protected:
 
 	///\brief	The translation to be used in the transform matrix.
 	Vect Trans;
-
-public:
-
-	///
-	///\fn	GameObject::GameObject();
-	///
-	///\brief	Default constructor. Automatically registers a GameObject for draw and update upon creation. If you don't want a GameObject to be updated or drawn, make sure to deregister it via SceneMan accessors in the Initialize method.
-	///
-	///\author	Max Krieger
-	///\date	3/4/2015
-	///
-	GameObject();
 
 	///
 	///\fn	void GameObject::BuildTextured(std::string texName, std::string modName);
@@ -85,16 +74,7 @@ public:
 	///
 	virtual GraphicsObjectFlatTexture* BuildTexturedDefault(std::string modName);
 
-	///
-	///\fn	virtual GameObject::~GameObject()
-	///
-	///\brief	Destructor. Since it's virtual, this is where the user can define any things they'd like their object to do upon being destroyed while NOT marked. THIS IS CALLED BY THE DUMPSTER!
-	///
-	///\author	Max Krieger
-	///\date	3/4/2015
-	///
-	virtual ~GameObject(){};
-
+private: 
 	///
 	///\fn	virtual void GameObject::Initialize();
 	///
@@ -126,6 +106,72 @@ public:
 	virtual void Update();
 
 	///
+	///\fn	virtual void GameObject::OnKeyPress(AZUL_KEY key);
+	///
+	///\brief	This is the virutal (overwriteable) method that they key object calls whenever it detects that this object is interested in knowing about a certain key PRESS. It passes in its key value - the user should test for all the different keys they are interested in here, and define what each key ought to do.
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	///\param	key	The key.
+	///
+	virtual void OnKeyPress(AZUL_KEY key);
+
+	///
+	///\fn	virtual void GameObject::OnKeyRelease(AZUL_KEY key);
+	///
+	///\brief	This is the virutal (overwriteable) method that they key object calls whenever it detects that this object is interested in knowing about a certain key RELEASE. It passes in its key value - the user should test for all the different keys they are interested in here, and define what each key ought to do.
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	///\param	key	The key.
+	///
+	virtual void OnKeyRelease(AZUL_KEY key);
+
+	///
+	///\fn	virtual void GameObject::OnDestroy()
+	///
+	///\brief	The method called when this object is destroyed, AFTER it has been marked by destroy. NOT CALLED BY DUMPSTER!
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	virtual void OnDestroy(){};
+
+	///
+	///\fn	virtual void GameObject::DeregisterAll();
+	///
+	///\brief	Auto-deregistration method for GameObjects. 
+	///
+	///\author	Max Krieger
+	///\date	3/13/2015
+	///
+	virtual void DeregisterAll();
+
+public:
+
+	///
+	///\fn	GameObject::GameObject();
+	///
+	///\brief	Default constructor. Automatically registers a GameObject for draw and update upon creation. If you don't want a GameObject to be updated or drawn, make sure to deregister it via SceneMan accessors in the Initialize method.
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	GameObject();
+
+	///
+	///\fn	virtual GameObject::~GameObject()
+	///
+	///\brief	Destructor. Since it's virtual, this is where the user can define any things they'd like their object to do upon being destroyed while NOT marked. THIS IS CALLED BY THE DUMPSTER!
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	virtual ~GameObject(){};
+
+		///
 	///\fn	virtual void GameObject::RegisterKeyPress(AZUL_KEY key);
 	///
 	///\brief	Registers this object to the InputManager for a key press event. The key you pass in here will be the key detected.
@@ -172,50 +218,6 @@ public:
 	///\param	key	The key.
 	///
 	virtual void DeregisterKeyRelease(AZUL_KEY key);
-
-	///
-	///\fn	virtual void GameObject::OnKeyPress(AZUL_KEY key);
-	///
-	///\brief	This is the virutal (overwriteable) method that they key object calls whenever it detects that this object is interested in knowing about a certain key PRESS. It passes in its key value - the user should test for all the different keys they are interested in here, and define what each key ought to do.
-	///
-	///\author	Max Krieger
-	///\date	3/4/2015
-	///
-	///\param	key	The key.
-	///
-	virtual void OnKeyPress(AZUL_KEY key);
-
-	///
-	///\fn	virtual void GameObject::OnKeyRelease(AZUL_KEY key);
-	///
-	///\brief	This is the virutal (overwriteable) method that they key object calls whenever it detects that this object is interested in knowing about a certain key RELEASE. It passes in its key value - the user should test for all the different keys they are interested in here, and define what each key ought to do.
-	///
-	///\author	Max Krieger
-	///\date	3/4/2015
-	///
-	///\param	key	The key.
-	///
-	virtual void OnKeyRelease(AZUL_KEY key);
-
-	///
-	///\fn	virtual void GameObject::OnDestroy()
-	///
-	///\brief	The method called when this object is destroyed, AFTER it has been marked by destroy. NOT CALLED BY DUMPSTER!
-	///
-	///\author	Max Krieger
-	///\date	3/4/2015
-	///
-	virtual void OnDestroy(){};
-
-	///
-	///\fn	virtual void GameObject::DeregisterAll();
-	///
-	///\brief	Auto-deregistration method for GameObjects. 
-	///
-	///\author	Max Krieger
-	///\date	3/13/2015
-	///
-	virtual void DeregisterAll();
 
 };
 

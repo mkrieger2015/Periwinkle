@@ -6,6 +6,7 @@ GameObject::GameObject()
 {
 	SceneMan::DrawRegistration(this);
 	SceneMan::UpdateRegistration(this);
+	SceneMan::DumpsterRegistration(this);
 }
 
 GraphicsObjectFlatTexture* GameObject::BuildTextured(std::string texName, std::string modName)

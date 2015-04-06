@@ -11,7 +11,6 @@ TestGOSecond::TestGOSecond(std::string modName)
 
 void TestGOSecond::Initialize()
 {
-	SceneMan::DumpsterRegistration(this);
 
 	CollidableGroup<TestGOSecond>::Register(this);
 

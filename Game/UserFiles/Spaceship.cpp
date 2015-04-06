@@ -19,8 +19,6 @@ void Spaceship::Initialize()
 
 	dispGraphicsObject->setWorld(world);
 
-	SceneMan::DumpsterRegistration(this);
-
 	RegisterKeyPress(AZUL_KEY::KEY_SPACE);
 
 	mainColliderObject= dispGraphicsObject;
@@ -58,7 +56,7 @@ void Spaceship::Draw()
 
 void Spaceship::OnDestroy()
 {
-	SceneMan::DumpsterDeregistration(this);
+	
 }
 
 Spaceship::~Spaceship()

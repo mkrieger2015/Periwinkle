@@ -20,8 +20,6 @@ void Bullet::Initialize()
 
 	dispGraphicsObject->setWorld(world);
 
-	SceneMan::DumpsterRegistration(this);
-
 	CollidableGroup<Bullet>::Register(this);
 
 	mainColliderObject= dispGraphicsObject;
@@ -49,7 +47,6 @@ void Bullet::Alarm0()
 void Bullet::OnDestroy()
 {
 	ClearAlarm(0);
-	SceneMan::DumpsterDeregistration(this);
 }
 
 Bullet::~Bullet()

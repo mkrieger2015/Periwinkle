@@ -19,8 +19,6 @@ void TestGO::Initialize()
 
 	dispGraphicsObject->setWorld(world);
 
-	SceneMan::DumpsterRegistration(this);
-
 	RegisterKeyPress(AZUL_KEY::KEY_Z);
 	RegisterKeyPress(AZUL_KEY::KEY_X);
 	RegisterKeyPress(AZUL_KEY::KEY_A);

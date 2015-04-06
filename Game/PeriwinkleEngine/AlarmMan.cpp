@@ -41,6 +41,9 @@ void AlarmMan::Deregister(Alarmable* obj, float time)
 
 void AlarmMan::AddAlarmTime(Alarmable* obj, float time, float timeAdded)
 {
+	int id;
+	id= 0;
+
 	std::multimap<float, AlarmMarker*>::iterator fst;
 	std::multimap<float, AlarmMarker*>::iterator lst;
 
@@ -58,18 +61,28 @@ void AlarmMan::AddAlarmTime(Alarmable* obj, float time, float timeAdded)
 	{
 		if((*it).second->GetCallbackPointer() == obj)
 		{
-			(*it).second->AddTime(timeAdded);
+			id= (*it).second->GetAlarmID();
+			(*it).second->GetCallbackPointer()->AddTime(id, timeAdded);
+			timelineMap.erase(it++);
 			found= true;
 		}
 		else
 		{
 			it++;
 		}		
+	}
+
+	if(found == true)
+	{
+		timelineMap.insert(std::pair<float, AlarmMarker*>(time, new AlarmMarker(obj,id,(time + timeAdded))));
 	}
 }
 
 void AlarmMan::SubtractAlarmTime(Alarmable* obj, float time, float timeSubtracted)
 {
+	int id;
+	id= 0;
+
 	std::multimap<float, AlarmMarker*>::iterator fst;
 	std::multimap<float, AlarmMarker*>::iterator lst;
 
@@ -87,7 +100,9 @@ void AlarmMan::SubtractAlarmTime(Alarmable* obj, float time, float timeSubtracte
 	{
 		if((*it).second->GetCallbackPointer() == obj)
 		{
-			(*it).second->SubtractTime(timeSubtracted);
+			id= (*it).second->GetAlarmID();
+			(*it).second->GetCallbackPointer()->SubtractTime(id, timeSubtracted);
+			timelineMap.erase(it++);
 			found= true;
 		}
 		else
@@ -95,9 +110,12 @@ void AlarmMan::SubtractAlarmTime(Alarmable* obj, float time, float timeSubtracte
 			it++;
 		}		
 	}
+
+	if(found == true)
+	{
+		timelineMap.insert(std::pair<float, AlarmMarker*>(time, new AlarmMarker(obj,id,(time - timeSubtracted))));
+	}
 }
-
-
 
 void AlarmMan::UpdateAlarms()
 {

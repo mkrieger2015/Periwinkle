@@ -19,17 +19,7 @@ private:
 	///\brief	Number of possible alarms set, currently three: Alarm 0, Alarm 1, and Alarm 2.
 	float curTimes[3];
 
-public:
-
-	///
-	///\fn	virtual Alarmable::~Alarmable();
-	///
-	///\brief	Destructor.
-	///
-	///\author	Max Krieger
-	///\date	3/4/2015
-	///
-	virtual ~Alarmable();
+protected: 
 
 	///
 	///\fn	virtual void Alarmable::Alarm0();
@@ -60,6 +50,19 @@ public:
 	///\date	3/4/2015
 	///
 	virtual void Alarm2();
+
+public:
+
+	///
+	///\fn	virtual Alarmable::~Alarmable();
+	///
+	///\brief	Destructor.
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	virtual ~Alarmable();
+
 
 	///
 	///\fn	void Alarmable::Dispatch(int alarmID);

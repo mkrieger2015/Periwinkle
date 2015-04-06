@@ -20,8 +20,6 @@ void EnemyCube::Initialize()
 
 	dispGraphicsObject->setWorld(world);
 
-	SceneMan::DumpsterRegistration(this);
-
 	CollidableGroup<EnemyCube>::Register(this);
 
 	mainColliderObject= dispGraphicsObject;
@@ -44,7 +42,7 @@ void EnemyCube::Draw()
 
 void EnemyCube::OnDestroy()
 {
-	SceneMan::DumpsterDeregistration(this);
+
 }
 
 void EnemyCube::SetPosition(float x, float y, float z)

@@ -79,6 +79,18 @@ public:
 	float GetAlarmTime();
 
 	///
+	///\fn	int AlarmMarker::GetAlarmID();
+	///
+	///\brief	Returns alarm ID (used to trigger proper alarm in callback).
+	///
+	///\author	Max Krieger
+	///\date	4/5/2015
+	///
+	///\return	The alarm ID.
+	///
+	int GetAlarmID();
+
+	///
 	///\fn	void AlarmMarker::TriggerAlarm();
 	///
 	///\brief	Triggers the Dispatch method in the callback Alarmable, passing in the alarmID member.
@@ -88,29 +100,6 @@ public:
 	///
 	void TriggerAlarm();
 
-	///
-	///\fn	void AlarmMarker::AddTime(float time);
-	///
-	///\brief	Adds an amount of time to this alarm.
-	///
-	///\author	Max Krieger
-	///\date	3/13/2015
-	///
-	///\param	time	The time.
-	///
-	void AddTime(float time);
-
-	///
-	///\fn	void AlarmMarker::SubtractTime(float time);
-	///
-	///\brief	Subtracts an amount of time to this alarm.
-	///
-	///\author	Max Krieger
-	///\date	3/13/2015
-	///
-	///\param	time	The time.
-	///
-	void SubtractTime(float time);
 };
 
 #endif
