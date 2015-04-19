@@ -2,6 +2,7 @@
 #include "../PeriwinkleEngine/ResourceMan.h"
 #include "../PeriwinkleEngine/SceneMan.h"
 #include "../PeriwinkleEngine/CollidableGroup.h"
+#include "../PeriwinkleEngine/CollisionSphere.h"
 #include "Bullet.h"
 
 EnemyCube::EnemyCube(std::string modName)
@@ -12,19 +13,17 @@ EnemyCube::EnemyCube(std::string modName)
 
 void EnemyCube::Initialize()
 {
+	solid= false;
 	angle= 0;
 	Scale.set(1, 1, 1);
 	Rot.set(ROT_XYZ, 0,angle,0);
 	Trans.set(0, 0, 0);
 	world = Matrix(SCALE,Scale) * Rot * Matrix(TRANS,Trans);
 
+	colVol= new CollisionSphere(dispGraphicsObject);
 	dispGraphicsObject->setWorld(world);
 
 	CollidableGroup<EnemyCube>::Register(this);
-
-	mainColliderObject= dispGraphicsObject;
-	mainColliderCenter= mainColliderObject->getModel()->center;
-	mainColliderRadius= mainColliderObject->getModel()->radius;
 }
 
 void EnemyCube::Update()
@@ -33,6 +32,7 @@ void EnemyCube::Update()
 	Rot.set(ROT_XYZ, 0, angle, 0);
 	world = Matrix(SCALE,Scale) * Rot * Matrix(TRANS,Trans);
 	dispGraphicsObject->setWorld(world);
+	UpdateCollidable();
 }
 
 void EnemyCube::Draw()
@@ -59,5 +59,6 @@ EnemyCube::~EnemyCube()
 {
 	CollidableGroup<EnemyCube>::Deregister(this);
 	delete dispGraphicsObject;
+	delete colVol;
 }
 

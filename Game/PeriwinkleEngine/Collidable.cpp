@@ -1,5 +1,14 @@
 #include "Collidable.h"
+#include "CollisionVolume.h"
 #include <iostream>
+
+#include "CollisionVolume.h"
+
+Collidable::Collidable()
+{
+	solid= false;
+	colVol= NULL;
+}
 
 void Collidable::Collision(Collidable* col)
 {
@@ -9,31 +18,13 @@ void Collidable::Collision(Collidable* col)
 
 bool Collidable::TestCollisionPair(Collidable *c1, Collidable *c2)
 {
-	Matrix m1= (Matrix(SCALE, c1->mainColliderRadius, c1->mainColliderRadius, c1->mainColliderRadius) * Matrix(TRANS, c1->mainColliderCenter))*c1->mainColliderObject->getWorld();
-	Matrix m2= (Matrix(SCALE, c2->mainColliderRadius, c2->mainColliderRadius, c2->mainColliderRadius) * Matrix(TRANS, c2->mainColliderCenter))*c2->mainColliderObject->getWorld();
+	return c1->colVol->Accept(c2->colVol);
+}
 
-	Vect centerBase= Vect(0,0,0);
-	Vect radiusBase= Vect(1,0,0);
-
-	Vect c1CenterAdj;
-	c1CenterAdj= centerBase*m1;
-	Vect c2CenterAdj;
-	c2CenterAdj= centerBase*m2;
-
-	float c1RadiusAdj;
-	c1RadiusAdj= Vect(c1CenterAdj - Vect(radiusBase*m1)).mag();
-
-	float c2RadiusAdj;
-	c2RadiusAdj= Vect(c2CenterAdj - Vect(radiusBase*m2)).mag();
-
-	float centerDist;
-	centerDist= Vect(c1CenterAdj - c2CenterAdj).mag();
-	float radiusSum;
-	radiusSum= c1RadiusAdj + c2RadiusAdj;
-
-	if(centerDist <= radiusSum)
+void Collidable::UpdateCollidable()
+{
+	if(solid == false && colVol != NULL)
 	{
-		return true;
+		colVol->UpdateVolume();
 	}
-		return false;
 }

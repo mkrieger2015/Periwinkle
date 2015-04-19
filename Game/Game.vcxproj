@@ -71,6 +71,7 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PreprocessToFile>false</PreprocessToFile>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -80,6 +81,9 @@
       <AdditionalDependencies>OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>%libcmt.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -116,9 +120,13 @@
     <ClCompile Include="PeriwinkleEngine\Alarmable.cpp" />
     <ClCompile Include="PeriwinkleEngine\AlarmMan.cpp" />
     <ClCompile Include="PeriwinkleEngine\AlarmMarker.cpp" />
+    <ClCompile Include="PeriwinkleEngine\CameraObject.cpp" />
     <ClCompile Include="PeriwinkleEngine\Collidable.cpp" />
     <ClCompile Include="PeriwinkleEngine\CollidableGroupBase.cpp" />
+    <ClCompile Include="PeriwinkleEngine\CollisionAABB.cpp" />
     <ClCompile Include="PeriwinkleEngine\CollisionMan.cpp" />
+    <ClCompile Include="PeriwinkleEngine\CollisionSphere.cpp" />
+    <ClCompile Include="PeriwinkleEngine\CollisionVolume.cpp" />
     <ClCompile Include="PeriwinkleEngine\Drawable.cpp" />
     <ClCompile Include="PeriwinkleEngine\DrawableMan.cpp" />
     <ClCompile Include="PeriwinkleEngine\Dumpster.cpp" />
@@ -139,10 +147,12 @@
     <ClCompile Include="PeriwinkleEngine\UpdateableMan.cpp" />
     <ClCompile Include="UserFiles\EnemyCube.cpp" />
     <ClCompile Include="UserFiles\Bullet.cpp" />
+    <ClCompile Include="UserFiles\Plane.cpp" />
     <ClCompile Include="UserFiles\ShooterScene.cpp" />
     <ClCompile Include="UserFiles\Spaceship.cpp" />
     <ClCompile Include="UserFiles\TestGO.cpp" />
     <ClCompile Include="UserFiles\TestGOSecond.cpp" />
+    <ClCompile Include="UserFiles\TestGOThird.cpp" />
     <ClCompile Include="UserFiles\TestScene.cpp" />
     <ClCompile Include="UserFiles\UserGamePrefs.cpp" />
   </ItemGroup>
@@ -156,13 +166,17 @@
     <ClInclude Include="PeriwinkleEngine\Alarmable.h" />
     <ClInclude Include="PeriwinkleEngine\AlarmMan.h" />
     <ClInclude Include="PeriwinkleEngine\AlarmMarker.h" />
+    <ClInclude Include="PeriwinkleEngine\CameraObject.h" />
     <ClInclude Include="PeriwinkleEngine\Collidable.h" />
     <ClInclude Include="PeriwinkleEngine\CollidableGroup.h" />
     <ClInclude Include="PeriwinkleEngine\CollidableGroupBase.h" />
+    <ClInclude Include="PeriwinkleEngine\CollisionAABB.h" />
     <ClInclude Include="PeriwinkleEngine\CollisionMan.h" />
     <ClInclude Include="PeriwinkleEngine\CollisionPairProcessor.h" />
     <ClInclude Include="PeriwinkleEngine\CollisionProcessorBase.h" />
     <ClInclude Include="PeriwinkleEngine\CollisionSingleProcessor.h" />
+    <ClInclude Include="PeriwinkleEngine\CollisionSphere.h" />
+    <ClInclude Include="PeriwinkleEngine\CollisionVolume.h" />
     <ClInclude Include="PeriwinkleEngine\DoxygenGroups.h" />
     <ClInclude Include="PeriwinkleEngine\Drawable.h" />
     <ClInclude Include="PeriwinkleEngine\DrawableMan.h" />
@@ -183,10 +197,12 @@
     <ClInclude Include="PeriwinkleEngine\UpdateableMan.h" />
     <ClInclude Include="UserFiles\EnemyCube.h" />
     <ClInclude Include="UserFiles\Bullet.h" />
+    <ClInclude Include="UserFiles\Plane.h" />
     <ClInclude Include="UserFiles\ShooterScene.h" />
     <ClInclude Include="UserFiles\Spaceship.h" />
     <ClInclude Include="UserFiles\TestGO.h" />
     <ClInclude Include="UserFiles\TestGOSecond.h" />
+    <ClInclude Include="UserFiles\TestGOThird.h" />
     <ClInclude Include="UserFiles\TestScene.h" />
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +236,9 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

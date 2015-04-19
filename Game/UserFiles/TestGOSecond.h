@@ -9,7 +9,6 @@ class TestGOSecond : public GameObject
 {
 private:
 	GraphicsObject *dispGraphicsObject;
-	GraphicsObjectWireFrame *s;
 public:
 	TestGOSecond(std::string modName);
 	~TestGOSecond();

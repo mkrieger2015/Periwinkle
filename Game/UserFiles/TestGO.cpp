@@ -2,6 +2,9 @@
 #include "../PeriwinkleEngine/ResourceMan.h"
 #include "../PeriwinkleEngine/SceneMan.h"
 #include "../PeriwinkleEngine/CollidableGroup.h"
+#include "../PeriwinkleEngine/CollisionAABB.h"
+#include "../PeriwinkleEngine/CameraObject.h"
+
 #include "ShooterScene.h"
 
 TestGO::TestGO(std::string texName, std::string modName)
@@ -12,9 +15,10 @@ TestGO::TestGO(std::string texName, std::string modName)
 
 void TestGO::Initialize()
 {
+	solid= false;
 	Scale.set(.5, .5, .5);
-	Rot.set(ROT_XYZ, 45, 45, 0);
-	Trans.set(40, 0, 0);
+	Rot.set(ROT_XYZ, 0, 0, 0);
+	Trans.set(0, 6, 0);
 	world = Matrix(SCALE,Scale) * Rot * Matrix(TRANS,Trans);
 
 	dispGraphicsObject->setWorld(world);
@@ -25,12 +29,19 @@ void TestGO::Initialize()
 	RegisterKeyPress(AZUL_KEY::KEY_S);
 	CollidableGroup<TestGO>::Register(this);
 
-	mainColliderObject= dispGraphicsObject;
-	mainColliderCenter= mainColliderObject->getModel()->center;
-	mainColliderRadius= mainColliderObject->getModel()->radius;
+	colVol= new CollisionAABB(dispGraphicsObject);
+	colVol->SetVisibility(true);
 
-	//DEBUG
-	s= new GraphicsObjectWireFrame(ResourceMan::GetModel("UnitSphere"));
+	cam= NULL;
+
+	
+	camUp= Vect(0,1,0);
+	camPos= Trans;
+	camPos += Vect(0, 150, -50);
+	camTarget= Trans;
+	
+	cam= new CameraObject(&camUp, &camPos, &camTarget);
+	
 }
 
 void TestGO::OnKeyPress(AZUL_KEY key)
@@ -70,38 +81,51 @@ void TestGO::Alarm1()
 
 void TestGO::Update()
 {
+	bool moved;
+	moved= false;
+
 	if(InputMan::GetKeyboard()->GetKeyState(AZUL_KEY::KEY_UP))
 	{
-		Trans += Vect(0,1,0);
+		Trans += Vect(0,0,1) * Rot;
+		moved= true;
 	}
 	if(InputMan::GetKeyboard()->GetKeyState(AZUL_KEY::KEY_DOWN))
 	{
-		Trans -= Vect(0,1,0);
+		Trans -= Vect(0,0,1) * Rot;
+		moved= true;
 	}
 	if(InputMan::GetKeyboard()->GetKeyState(AZUL_KEY::KEY_LEFT))
 	{
-		Trans -= Vect(1,0,0);
+		Rot *= Matrix( ROT_Y, .05f );
+		moved= true;
 	}
 	if(InputMan::GetKeyboard()->GetKeyState(AZUL_KEY::KEY_RIGHT))
 	{
-		Trans += Vect(1,0,0);
+		Rot *= Matrix( ROT_Y, -.05f );
+		moved= true;
 	}
 
-	world = Matrix(SCALE,Scale) * Rot * Matrix(TRANS,Trans);
-	dispGraphicsObject->setWorld(world);
+	if(moved == true)
+	{
+		world = Matrix(SCALE,Scale) * Rot * Matrix(TRANS,Trans);
+		dispGraphicsObject->setWorld(world);
+
+		camUp= Vect(0,1,0);
+		camPos= Trans;
+		camPos += Vect(0, 150, -50);
+		camTarget= Trans;
+	
+		cam->CamUpdate(&camUp, &camPos, &camTarget);
+		
+	}
+
+	UpdateCollidable();
 }
 
 void TestGO::Draw()
 {
 	dispGraphicsObject->Render();
-
-	//DEBUG FOR DRAWING BOUNDING SPHERE//
-	Matrix mAdjust= Matrix(SCALE, dispGraphicsObject->getModel()->radius, dispGraphicsObject->getModel()->radius, dispGraphicsObject->getModel()->radius ) * Matrix(TRANS, dispGraphicsObject->getModel()->center);
-	Matrix m= dispGraphicsObject->getWorld();
-	m= mAdjust*m;
-
-	s->setWorld(m);
-	s->Render();
+	colVol->DrawVolume();
 }
 
 void TestGO::OnDestroy()
@@ -116,9 +140,16 @@ void TestGO::Collision( TestGOSecond*)
 	SceneMan::NextScene(new ShooterScene());
 }
 
+void TestGO::Collision( TestGOThird*)
+{
+	SceneMan::NextScene(new ShooterScene());
+}
+
+
 TestGO::~TestGO()
 {
 	CollidableGroup<TestGO>::Deregister(this);
 	delete dispGraphicsObject;
-	delete s;
+	delete colVol;
+	delete cam;
 }

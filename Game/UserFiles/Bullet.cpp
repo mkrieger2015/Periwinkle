@@ -2,6 +2,7 @@
 #include "../PeriwinkleEngine/ResourceMan.h"
 #include "../PeriwinkleEngine/SceneMan.h"
 #include "../PeriwinkleEngine/CollidableGroup.h"
+#include "../PeriwinkleEngine/CollisionSphere.h"
 #include "Spaceship.h"
 
 Bullet::Bullet(std::string modName, Spaceship *player)
@@ -13,6 +14,7 @@ Bullet::Bullet(std::string modName, Spaceship *player)
 
 void Bullet::Initialize()
 {
+	solid= false;
 	SetAlarm(0,2);
 	Scale.set(2, 2, 2);
 	Rot.set(ROT_XYZ, 0,0,0);
@@ -22,9 +24,7 @@ void Bullet::Initialize()
 
 	CollidableGroup<Bullet>::Register(this);
 
-	mainColliderObject= dispGraphicsObject;
-	mainColliderCenter= mainColliderObject->getModel()->center;
-	mainColliderRadius= mainColliderObject->getModel()->radius;
+	colVol= new CollisionSphere(dispGraphicsObject);
 }
 
 void Bullet::Update()
@@ -32,6 +32,7 @@ void Bullet::Update()
 	Trans += Vect(0,2,0);
 	world = Matrix(SCALE,Scale) * Rot * Matrix(TRANS,Trans);
 	dispGraphicsObject->setWorld(world);
+	UpdateCollidable();
 }
 
 void Bullet::Draw()
@@ -53,6 +54,7 @@ Bullet::~Bullet()
 {
 	CollidableGroup<Bullet>::Deregister(this);
 	delete dispGraphicsObject;
+	delete colVol;
 }
 
 void Bullet::Collision(EnemyCube*)

@@ -10,6 +10,7 @@ void ResourceMan::LoadAllContent()
 	//the BoundingSphere.azul has already been pre-converted
 	system("ConverterDebug space_frigate.fbx > DebugInfo.txt");
 	system("ConverterDebug Cottage.fbx > DebugInfo.txt");
+	system("ConverterDebug Plane.fbx > DebugInfo.txt");
 
 	printf("Converting completed\n");
 
@@ -19,7 +20,13 @@ void ResourceMan::LoadAllContent()
 
 	ResourceMan::AddModel("UnitSphere","BoundingSphere.azul");
 
+	ResourceMan::AddModel("UnitCube","BoundingBox.azul");
+
 	ResourceMan::AddTexture("Cube", "brick-wall.tga");
 
 	ResourceMan::AddModel("Cottage", "Cottage.azul");
+
+	ResourceMan::AddTexture("Grid", "grid.tga");
+
+	ResourceMan::AddModel("Plane", "Plane.azul");
 }

@@ -100,6 +100,24 @@
     <ClCompile Include="UserFiles\TestGOSecond.cpp">
       <Filter>User Files</Filter>
     </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\CollisionSphere.cpp">
+      <Filter>Periwinkle Engine\Collisions\CollisionVolumes</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\CollisionVolume.cpp">
+      <Filter>Periwinkle Engine\Collisions\CollisionVolumes</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\Plane.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\CollisionAABB.cpp">
+      <Filter>Periwinkle Engine\Collisions\CollisionVolumes</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFiles\TestGOThird.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeriwinkleEngine\CameraObject.cpp">
+      <Filter>Periwinkle Engine\Camera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="_Libs">
@@ -182,6 +200,12 @@
     </Filter>
     <Filter Include="Periwinkle Engine\Doxygen">
       <UniqueIdentifier>{7014ef30-4b1c-48f6-a476-5ec40e6eb7d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Collisions\CollisionVolumes">
+      <UniqueIdentifier>{c7eda3d4-758e-46cf-899d-c83a5061f152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Periwinkle Engine\Camera">
+      <UniqueIdentifier>{46308b9b-137f-43a8-b914-ee64eff298ae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +332,24 @@
     <ClInclude Include="UserFiles\TestGOSecond.h">
       <Filter>User Files</Filter>
     </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionSphere.h">
+      <Filter>Periwinkle Engine\Collisions\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionVolume.h">
+      <Filter>Periwinkle Engine\Collisions\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\Plane.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CollisionAABB.h">
+      <Filter>Periwinkle Engine\Collisions\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFiles\TestGOThird.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeriwinkleEngine\CameraObject.h">
+      <Filter>Periwinkle Engine\Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\Azul\lib\AzulDebug.lib">
@@ -334,5 +376,8 @@
     <Library Include="..\Azul\lib\AzulRelease.lib">
       <Filter>_Libs\_Azul</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

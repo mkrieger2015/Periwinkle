@@ -23,6 +23,7 @@ class GameObject : public Inputable, public Drawable, public Updateable, public 
 {
 
 protected: 
+
 	///\brief	The object's transform matrix.
 	Matrix world;
 

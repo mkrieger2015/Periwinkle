@@ -65,6 +65,7 @@
       <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>$(SolutionDir)OpenGL\GLTools\include;$(SolutionDir)OpenGL\GLFW;$(SolutionDir)OpenGL\GLFW\include;$(SolutionDir)Math\include;$(SolutionDir)File\include;$(SolutionDir)Time\include;$(SolutionDir)Azul\include</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -73,6 +74,9 @@
     <Lib>
       <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
     </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

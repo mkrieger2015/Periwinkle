@@ -3,6 +3,7 @@
 
 #include "Azul.h"
 
+
 ///
 ///\class	Collidable
 ///\ingroup   Collisions
@@ -11,21 +12,29 @@
 ///\author	Max Krieger
 ///\date	3/4/2015
 ///
+class CollisionVolume;
+
 class Collidable
 {
 protected:
+	
+	///\brief   Sets object to solid or non-solid. If an object is solid, its collision data need only be updated once. If it is non-solid, we can assume it will move, and so collision data will be updated at every frame.
+	bool solid;
 
-
-	///\brief	The graphicsobject used to determine collision bounds.
-	GraphicsObject* mainColliderObject;
-
-
-	///\brief	The main collider center.
-	Vect mainColliderCenter;
-
-	///\brief	The main collider radius.
-	float mainColliderRadius;
+	///\brief The collision volume for this object.
+	CollisionVolume *colVol;
+	
 public:
+	
+	///
+	///\fn	Collidable::Collidable()
+	///
+	///\brief	Constructor. Sets solidity defaults and nulls collision volume.
+	///
+	///\author	Max Krieger
+	///\date	4/15/2015
+	///
+	Collidable();
 
 	///
 	///\fn	virtual Collidable::~Collidable()
@@ -63,6 +72,16 @@ public:
 	///\return	true if the test passes, false if the test fails.
 	///
 	static bool TestCollisionPair(Collidable* c1, Collidable* c2);
+
+	///
+	///\fn	void Collidable::~Collidable()
+	///
+	///\brief	Manages the updating of collider data.
+	///
+	///\author	Max Krieger
+	///\date	3/4/2015
+	///
+	void UpdateCollidable();
 
 	///
 	///\fn	template <typename C> void Collidable::RegisterCollision( C *c)

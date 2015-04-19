@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Time" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQSAAAAAAAAAAEAgAEAAAQA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\Time\include\Time.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIABAAAAAAAgAAAAAAAAAAAAgAEAEACA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\Time\include\Timer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="File" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAACAAAACAAAQIAAAAAYgAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\File\include\File.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyCube" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUBAAAAAIAAAwAAAAAAAAAAAAAAAgEAAIABAABAAAA=</HashCode>
+      <FileName>UserFiles\EnemyCube.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAIAAAwAAAAAAAAAAAAAAAAAEAABBAAAQAAA=</HashCode>
+      <FileName>UserFiles\Bullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plane" Collapsed="true">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAwAAAgAAAAAAAAAAAAAAAAIBAAAAAAA=</HashCode>
+      <FileName>UserFiles\Plane.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spaceship" Collapsed="true">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgRBAAAAAIAAA4AAAAAAAAAAAAAAAAAAAAABBAAAAAA=</HashCode>
+      <FileName>UserFiles\Spaceship.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestGO" Collapsed="true">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQBBAAAAIAAA4AAAAgAIAAAAAAAAQAAAChBAAEAAAA=</HashCode>
+      <FileName>UserFiles\TestGO.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestGOSecond" Collapsed="true">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBIAAIAIAAAwAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>UserFiles\TestGOSecond.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestGOThird" Collapsed="true">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAEAAAIAAAwAAAAAAAAAAAAAAAAAgAAABAAAAAAA=</HashCode>
+      <FileName>UserFiles\TestGOThird.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShooterScene" Collapsed="true">
+    <Position X="12.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserFiles\ShooterScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestScene" Collapsed="true">
+    <Position X="14.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserFiles\TestScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alarmable" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAAAAAAEAAAAAAAAAAACAAAAAEAAAABCAAAAAAE=</HashCode>
+      <FileName>PeriwinkleEngine\Alarmable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmMan" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAACACAQAAAAAAAAAAABAAAAAAAAAAAAQEA=</HashCode>
+      <FileName>PeriwinkleEngine\AlarmMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlarmMarker" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAEAAABIQAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>PeriwinkleEngine\AlarmMarker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Updateable" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\Updateable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateableMan" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQgAAA=</HashCode>
+      <FileName>PeriwinkleEngine\UpdateableMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeMan" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAIAAQEAAAAAEAQAAQEAAAAAQAAgAAAAAIA=</HashCode>
+      <FileName>PeriwinkleEngine\TimeMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEABAAAAgAwAAAgAEAAAAAggAAAAAAAAAAICAAMQ=</HashCode>
+      <FileName>PeriwinkleEngine\Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drawable" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\Drawable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableMan" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAQAAAAAAAAAAAACAABgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\DrawableMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhQBEAAoAAAAAwBAAAIAAAEAAAAACgEAABAAAAoAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inputable" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAEAAAAADAEAABAAAAgAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\Inputable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputableMan" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAABAAAAAEAAAAACAEAAAAAAAgAACA=</HashCode>
+      <FileName>PeriwinkleEngine\InputableMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyObject" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBgAAAAAAAQgQABAAAAAABAABIAAiAAAAAAAAAAQA=</HashCode>
+      <FileName>PeriwinkleEngine\KeyObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourceMan" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAACAAAEAAAAAAAEAQQAAAgAAQASoAAAAABA=</HashCode>
+      <FileName>PeriwinkleEngine\ResourceMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene" Collapsed="true">
+    <Position X="13.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQEgAAAQKikfQRhCAAgASiQgAACAAQAAQEAEAgBiA=</HashCode>
+      <FileName>PeriwinkleEngine\Scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneMan" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAUAAAAAACgSEBACAABAYgoAMACigQSBQkAIAgBjA=</HashCode>
+      <FileName>PeriwinkleEngine\SceneMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collidable" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAAAAgAIAAAIAAAAAAKAAAAAgAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\Collidable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollidableGroup&lt;C&gt;" Collapsed="true">
+    <Position X="8.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAAAAAAEAAAAAQAAAAAAJAAAAQAAgAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollidableGroup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollidableGroupBase" Collapsed="true">
+    <Position X="8.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollidableGroupBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionMan" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAEAABAAgAAAAAAgAAAAAQ=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionPairProcessor&lt;C1, C2&gt;" Collapsed="true">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionPairProcessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionProcessorBase" Collapsed="true">
+    <Position X="6.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACQAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionProcessorBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionSingleProcessor&lt;C&gt;" Collapsed="true">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAQABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionSingleProcessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionAABB">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEAIABABAAwAQAAIAAAAIEgACQAAAASgACAAAEAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionAABB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionSphere">
+    <Position X="3" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAAAACDAAQAQAIQAAAAAgACCAAAEBSgAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionSphere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolume">
+    <Position X="1.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACBAAQAQAACAAAAAAAAAAAAAASgAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CollisionVolume.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Terminable" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAQAAAAAAAAAAAAAAQAAAwQAAAAAgAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\Terminable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminableReciever" Collapsed="true">
+    <Position X="5.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>PeriwinkleEngine\TerminableReciever.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminationMan" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAgAAQAAAAAAAEAAA=</HashCode>
+      <FileName>PeriwinkleEngine\TerminationMan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dumpster" Collapsed="true">
+    <Position X="5.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAACAAAAgAAAAAAAAAAABAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>PeriwinkleEngine\Dumpster.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraObject">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAIAAAAgAABAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>PeriwinkleEngine\CameraObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="FileHandle" Collapsed="true">
+    <Position X="17.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\File\include\File.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="Duration" Collapsed="true">
+    <Position X="17.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAABAAAADAAAAAAAkAgAAAAAEAIAAIAAgAAAAA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\Time\include\Time.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FileMode" Collapsed="true">
+    <Position X="21.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIIEAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\File\include\File.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FileSeek" Collapsed="true">
+    <Position X="23" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQgAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\File\include\File.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FileError" Collapsed="true">
+    <Position X="19.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAIAAAAAAACAAAAAAAAQAAAAAAGMA=</HashCode>
+      <FileName>C:\Users\Moogle\PERFORCE\mkrieger_GAM377\berthiaume2015spring_gam377\student\mkrieger\Sprint 2\File\include\File.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
